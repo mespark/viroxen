@@ -335,7 +335,7 @@ export const NAV_LINKS = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export const SUPPORT_EMAIL = "viroxencybersec@gmail.com";
+export const SUPPORT_EMAIL = "contact@mespark.in";
 
 export type Phase = {
   n: string;
@@ -453,4 +453,4 @@ export const faqs: Faq[] = [
   },
 ];
 
-export const SITE_URL = "https://viroxen.com";
+export const SITE_URL = "https://viroxen.mespark.in";
