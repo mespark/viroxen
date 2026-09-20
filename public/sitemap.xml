@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://viroxen.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://viroxen.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://viroxen.com/products</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viroxen.com/research</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://viroxen.com/methodology</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viroxen.com/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://viroxen.com/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://viroxen.com/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://viroxen.com/book</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://viroxen.com/privacy</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://viroxen.com/terms</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://viroxen.com/cookies</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://viroxen.com/research/owasp-top-10-2024-what-changed</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://viroxen.com/research/cvss-scoring-practical-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://viroxen.com/research/supply-chain-hardening-for-startups</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
