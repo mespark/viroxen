@@ -1,1 +1,18 @@
 project_id = "your-project-ref"
+
+# These functions run before a user has a session (sign-in, signup, reset, contact forms),
+# so JWT verification must be disabled.
+[functions.auth-otp]
+verify_jwt = false
+
+[functions.auth-reset-otp]
+verify_jwt = false
+
+[functions.auth-reset-request]
+verify_jwt = false
+
+[functions.auth-signin-guard]
+verify_jwt = false
+
+[functions.notify-submission]
+verify_jwt = false
