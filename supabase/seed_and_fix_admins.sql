@@ -11,7 +11,7 @@
 --   2. Rewrites handle_new_user / handle_user_email_confirmed so exactly two
 --      emails receive the admin role:
 --        - admin@example.com
---        - viroxencybersec@gmail.com
+--        - admin@example.com
 --   3. Backfills: grants admin to those two if they already exist; removes
 --      admin from anyone else.
 -- ============================================================================
@@ -320,11 +320,11 @@ DELETE FROM public.user_roles
  WHERE role = 'admin'::app_role
    AND user_id NOT IN (
      SELECT id FROM auth.users
-      WHERE lower(email) IN ('admin@example.com', 'viroxencybersec@gmail.com')
+      WHERE lower(email) IN ('admin@example.com', 'admin2@gmail.com')
    );
 
 INSERT INTO public.user_roles (user_id, role)
 SELECT id, 'admin'::app_role
   FROM auth.users
- WHERE lower(email) IN ('admin@example.com', 'viroxencybersec@gmail.com')
+ WHERE lower(email) IN ('admin@example.com', 'admin2@gmail.com')
 ON CONFLICT DO NOTHING;
