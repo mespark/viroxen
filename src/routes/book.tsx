@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
-import { SUPPORT_EMAIL } from "@/lib/site-data";
+import { SUPPORT_EMAIL, SITE_URL } from "@/lib/site-data";
 import { plansQuery } from "@/lib/queries";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -28,9 +28,9 @@ export const Route = createFileRoute("/book")({
         content:
           "Request a VIROXEN security audit. Tell us about your scope and we'll respond within one business day.",
       },
-      { property: "og:url", content: "/book" },
+      { property: "og:url", content: `${SITE_URL}/book` },
     ],
-    links: [{ rel: "canonical", href: "/book" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/book` }],
   }),
   component: Book,
 });
