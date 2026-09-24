@@ -5,6 +5,7 @@ import { ExternalLink, Github, Lock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
+import { SITE_URL } from "@/lib/site-data";
 import { RevealStagger, RevealItem } from "@/components/motion/Reveal";
 import { listProducts } from "@/lib/admin.functions";
 
@@ -17,9 +18,9 @@ export const Route = createFileRoute("/products")({
         content:
           "In-house security tooling built and maintained by VIROXEN — free tools for the community and paid products for engineering teams.",
       },
-      { property: "og:url", content: "/products" },
+     { property: "og:url", content: `${SITE_URL}/products` },
     ],
-    links: [{ rel: "canonical", href: "/products" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/products` }],
   }),
   component: Products,
 });
