@@ -12,9 +12,9 @@ export const Route = createFileRoute("/about")({
         content:
           "VIROXEN is an independent cybersecurity company focused on security assessments, in-house products, and applied research — with a strict ethical stance.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: `${SITE_URL}/about` },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
   }),
   component: About,
 });
