@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal, RevealStagger, RevealItem } from "@/components/motion/Reveal";
-
+import { SITE_URL } from "@/lib/site-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
