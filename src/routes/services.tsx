@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal, RevealStagger, RevealItem } from "@/components/motion/Reveal";
 import { addonsQuery, plansQuery } from "@/lib/queries";
-import { includedInAllPaid } from "@/lib/site-data";
+import { includedInAllPaid, SITE_URL } from "@/lib/site-data";
 
 type Plan = {
   slug: string;
@@ -30,9 +30,9 @@ export const Route = createFileRoute("/services")({
         content:
           "Structured web application, API and infrastructure security assessments. Aligned with OWASP Top 10, OWASP ASVS Level 2, and CVSS 3.1 scoring.",
       },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: `${SITE_URL}/services` },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/services` }],
   }),
   component: Services,
 });
