@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
-import { faqs, SUPPORT_EMAIL } from "@/lib/site-data";
+import { faqs, SUPPORT_EMAIL, SITE_URL } from "@/lib/site-data";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -26,9 +26,9 @@ export const Route = createFileRoute("/faq")({
         property: "og:description",
         content: "Common questions about scope, standards, deliverables, and retests.",
       },
-      { property: "og:url", content: "/faq" },
+      { property: "og:url", content: `${SITE_URL}/faq` },
     ],
-    links: [{ rel: "canonical", href: "/faq" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/faq` }],
     scripts: [
       {
         type: "application/ld+json",
