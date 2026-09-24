@@ -9,7 +9,7 @@ import { Reveal, RevealStagger, RevealItem } from "@/components/motion/Reveal";
 import { Parallax } from "@/components/motion/Parallax";
 import { HeroShield } from "@/components/motion/HeroShield";
 import { HeroBackdrop, WordsReveal, Magnetic, ClientOnlyFX } from "@/components/motion/HeroFX";
-import { formatPostDate, posts } from "@/lib/site-data";
+import { formatPostDate, posts, SITE_URL } from "@/lib/site-data";
 import { listAuditedClients, listTools } from "@/lib/admin.functions";
 import { publishedPostsQuery } from "@/lib/queries";
 
@@ -22,9 +22,9 @@ export const Route = createFileRoute("/")({
         content:
           "Security audits, in-house security products, and applied research. Aligned with OWASP and CVSS. No fear, no hype — just findings you can act on.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: `${SITE_URL}/` },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
   }),
   component: Home,
 });
