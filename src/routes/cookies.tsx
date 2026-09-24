@@ -1,14 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
+import { SITE_URL } from "@/lib/site-data";
 
 export const Route = createFileRoute("/cookies")({
   head: () => ({
     meta: [
       { title: "Cookie Policy — VIROXEN" },
       { name: "description", content: "How VIROXEN uses cookies on this website." },
-      { property: "og:url", content: "/cookies" },
+      { property: "og:url", content: `${SITE_URL}/cookies` },
     ],
-    links: [{ rel: "canonical", href: "/cookies" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/cookies` }],
   }),
   component: Cookies,
 });
