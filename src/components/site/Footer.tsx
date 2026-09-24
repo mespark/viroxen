@@ -96,7 +96,17 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>© {year} VIROXEN. All rights reserved.</p>
-          <p className="tracking-wide">Evidence-based security engineering.</p>
+                    <p className="tracking-wide">
+            Evidence-based security engineering · Built by{" "}
+            
+              href="https://mespark.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/80 underline decoration-dotted underline-offset-2 hover:text-primary"
+            >
+              Ravi Yadav (Spark)
+            </a>
+          </p>
         </div>
       </div>
     </footer>
