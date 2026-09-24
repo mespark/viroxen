@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
 import { publishedPostsQuery } from "@/lib/queries";
-import { formatPostDate } from "@/lib/site-data";
+import { formatPostDate, SITE_URL } from "@/lib/site-data";
 
 export const Route = createFileRoute("/research/")({
   head: () => ({
@@ -16,9 +16,9 @@ export const Route = createFileRoute("/research/")({
         content:
           "Vulnerability analysis, secure coding notes, and threat intelligence — grounded, calm, and citation-ready.",
       },
-      { property: "og:url", content: "/research" },
+      { property: "og:url", content: `${SITE_URL}/research` },
     ],
-    links: [{ rel: "canonical", href: "/research" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/research` }],
   }),
   component: Research,
 });
