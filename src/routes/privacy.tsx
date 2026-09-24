@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
-import { SUPPORT_EMAIL } from "@/lib/site-data";
+import { SUPPORT_EMAIL, SITE_URL } from "@/lib/site-data";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — VIROXEN" },
       { name: "description", content: "How VIROXEN collects, uses, and protects your data." },
-      { property: "og:url", content: "/privacy" },
+      { property: "og:url", content: `${SITE_URL}/privacy` },
     ],
-    links: [{ rel: "canonical", href: "/privacy" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/privacy` }],
   }),
   component: Privacy,
 });
