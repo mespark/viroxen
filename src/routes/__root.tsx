@@ -17,6 +17,7 @@ import { ThemeProvider, themeInitScript } from "../lib/theme";
 import { supabase } from "../integrations/supabase/client";
 import { PageTransition } from "../components/motion/PageTransition";
 import { ScrollProgress } from "../components/motion/ScrollProgress";
+import { SITE_URL, SUPPORT_EMAIL } from "../lib/site-data";
 
 function NotFoundComponent() {
   return (
@@ -89,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "VIROXEN is a cybersecurity company offering security audits, in-house security products, and applied research for engineering teams.",
       },
-      { name: "author", content: "VIROXEN" },
+            { name: "author", content: "VIROXEN" },
       { name: "theme-color", content: "#0A0E17" },
       { property: "og:title", content: "VIROXEN — Cybersecurity Services, Products & Research" },
       {
@@ -99,7 +100,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:site_name", content: "VIROXEN" },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: `${SITE_URL}/og-image.png` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.png` },
     ],
     links: [
       {
@@ -107,6 +111,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "canonical", href: SITE_URL },
       {
         rel: "preconnect",
         href: "https://fonts.googleapis.com",
@@ -124,6 +129,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         children: themeInitScript,
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "VIROXEN",
+          url: SITE_URL,
+          logo: `${SITE_URL}/favicon.ico`,
+          email: SUPPORT_EMAIL,
+          description:
+            "VIROXEN is a cybersecurity company offering security audits, in-house security products, and applied research for engineering teams.",
+          sameAs: [
+            "https://www.linkedin.com/company/viroxen-cybersecurity/",
+            "https://www.instagram.com/viroxen.co",
+            "https://x.com/ViroxenHQ",
+            "https://youtube.com/@viroxen-cybersec",
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "VIROXEN",
+          url: SITE_URL,
+          creator: {
+            "@type": "Person",
+            name: "Ravi Yadav",
+            alternateName: "Spark",
+            url: "https://mespark.in",
+            jobTitle: "Security Architect & Software Engineer",
+            sameAs: ["https://mespark.in"],
+          },
+        }),
       },
     ],
   }),
