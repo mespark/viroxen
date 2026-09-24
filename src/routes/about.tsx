@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal, RevealStagger, RevealItem } from "@/components/motion/Reveal";
@@ -115,6 +116,34 @@ function About() {
                 <li>No fabricated or embellished findings — ever.</li>
                 <li>No hidden dependencies or undocumented data collection in our tools.</li>
               </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+            <section className="border-b border-border/60 py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="grid gap-12 md:grid-cols-3">
+            <div>
+              <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-primary">
+                Built by
+              </h2>
+            </div>
+            <div className="md:col-span-2 space-y-4 text-foreground/90">
+              <p>
+                This platform was designed and built by{" "}
+                <span className="font-semibold text-foreground">Ravi Yadav</span>, also known as{" "}
+                <span className="text-primary">Spark</span> — a security architect and software
+                engineer who handled the audits framework, tooling and full-stack development here.
+              </p>
+              
+                href="https://mespark.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+              >
+                See more of my work at mespark.in <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             </div>
           </Reveal>
         </div>
