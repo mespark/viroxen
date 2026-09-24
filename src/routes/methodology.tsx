@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
-import { methodology } from "@/lib/site-data";
+import { methodology, SITE_URL } from "@/lib/site-data";
 
 export const Route = createFileRoute("/methodology")({
   head: () => ({
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/methodology")({
         content:
           "How VIROXEN runs a security audit: six documented phases aligned with OWASP ASVS and CVSS 3.1.",
       },
-      { property: "og:url", content: "/methodology" },
+      { property: "og:url", content: `${SITE_URL}/methodology` },
     ],
-    links: [{ rel: "canonical", href: "/methodology" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/methodology` }],
   }),
   component: Methodology,
 });
