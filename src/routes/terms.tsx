@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
-import { SUPPORT_EMAIL } from "@/lib/site-data";
+import { SUPPORT_EMAIL, SITE_URL } from "@/lib/site-data";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       { title: "Terms of Service — VIROXEN" },
       { name: "description", content: "Terms governing use of the VIROXEN website and services." },
-      { property: "og:url", content: "/terms" },
+      { property: "og:url", content: `${SITE_URL}/terms` },
     ],
-    links: [{ rel: "canonical", href: "/terms" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/terms` }],
   }),
   component: Terms,
 });
