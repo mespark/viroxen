@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { supabase } from "@/integrations/supabase/client";
-import { formatPostDate } from "@/lib/site-data";
+import { formatPostDate, SITE_URL } from "@/lib/site-data";
 
 type Post = {
   slug: string;
@@ -37,10 +37,10 @@ export const Route = createFileRoute("/research/$slug")({
           { property: "og:title", content: loaderData.post.title },
           { property: "og:description", content: loaderData.post.excerpt ?? "" },
           { property: "og:type", content: "article" },
-          { property: "og:url", content: `/research/${params.slug}` },
+          { property: "og:url", content: `${SITE_URL}/research/${params.slug}` },
         ]
       : [{ name: "robots", content: "noindex" }],
-    links: [{ rel: "canonical", href: `/research/${params.slug}` }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/research/${params.slug}` }],
   }),
   component: PostPage,
   errorComponent: () => (
