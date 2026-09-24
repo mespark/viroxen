@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
-import { SUPPORT_EMAIL } from "@/lib/site-data";
+import { SUPPORT_EMAIL, SITE_URL } from "@/lib/site-data";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/contact")({
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/contact")({
     meta: [
       { title: "Contact — VIROXEN" },
       { name: "description", content: "Get in touch with VIROXEN about audits, tooling, research, or partnerships." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: `${SITE_URL}/contact` },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/contact` }],
   }),
   component: Contact,
 });
