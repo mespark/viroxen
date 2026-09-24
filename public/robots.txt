@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://viroxen.com/sitemap.xml
+Sitemap: https://viroxen.mespark.in/sitemap.xml
