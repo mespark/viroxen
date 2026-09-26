@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader, SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal, RevealStagger, RevealItem } from "@/components/motion/Reveal";
 import { SITE_URL } from "@/lib/site-data";
+
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
@@ -121,7 +122,7 @@ function About() {
         </div>
       </section>
 
-            <section className="border-b border-border/60 py-16">
+      <section className="border-b border-border/60 py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Reveal className="grid gap-12 md:grid-cols-3">
             <div>
@@ -136,7 +137,7 @@ function About() {
                 <span className="text-primary">Spark</span> — a security architect and software
                 engineer who handled the audits framework, tooling and full-stack development here.
               </p>
-              
+              <a
                 href="https://mespark.in"
                 target="_blank"
                 rel="noopener noreferrer"
